@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Font Awesome for icons, like the dropdown arrow and hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navb2-navbar">
+        <div class="navb2-logo"><a href="/">ZEESHAN</a></div>
+        
+        <!-- Hamburger menu icon for mobile -->
+        <div class="navb2-hamburger" onclick="toggleMenu()">
+            <span class="navb2-bar"></span>
+            <span class="navb2-bar"></span>
+            <span class="navb2-bar"></span>
+        </div>
+        
+        <ul class="navb2-menu">
+            <li><a href="#">HOME</a></li>
+            <li class="navb2-dropdown">
+                <a href="#">PORTFOLIO <i class="fas fa-caret-down"></i></a>
+                <ul class="navb2-dropdown-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">UI/UX</a></li>
+                    <li><a href="#">Branding</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        
+        <a href="#" class="navb2-button">Contact Us</a>
+    </nav>
+
+
+
+    <script>
+        // JavaScript for handling the mobile menu toggle
+        function toggleMenu() {
+            const menu = document.querySelector('.navb2-menu');
+            const hamburger = document.querySelector('.navb2-hamburger');
+            const button = document.querySelector('.navb2-button');
+            
+            menu.classList.toggle('navb2-active');
+            hamburger.classList.toggle('navb2-active');
+            
+            // Toggle button display as well
+            if (menu.classList.contains('navb2-active')) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
